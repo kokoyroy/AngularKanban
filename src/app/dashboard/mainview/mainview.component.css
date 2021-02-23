@@ -25,5 +25,49 @@
 }
 .board-bar .board-name {
     /* opacity: 1; */
-font-size: large;
+    font-size: large;
+}
+.board {
+    width: 95%;
+    overflow: hidden;
+    height: 100%;
+    margin: 10px auto;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.board::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: lightgray;
+    opacity: 0.1;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.board-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow-x: auto;
+}
+.board-wrapper .board-columns {
+    display: flex;
+    flex-grow: 1;
+
+}
+.board-wrapper .board-columns .board-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    min-width: 300px;
+    margin: 30px 15px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid black;
 }
