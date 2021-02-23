@@ -33,21 +33,11 @@
     height: 100%;
     margin: 10px auto;
     border-radius: 10px;
-    position: relative;
     display: flex;
+    background-color: rgba(133, 127, 127, 0.15);
     flex-direction: column;
 }
-.board::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    background: lightgray;
-    opacity: 0.1;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-}
+
 .board-wrapper {
     display: flex;
     flex-grow: 1;
@@ -56,7 +46,6 @@
 .board-wrapper .board-columns {
     display: flex;
     flex-grow: 1;
-
 }
 .board-wrapper .board-columns .board-column {
     display: flex;
@@ -70,4 +59,25 @@
     padding: 25px;
     border-radius: 10px;
     border: 1px solid black;
+    background-color:rgba(182, 169, 169, 0.74);
+}
+.column-title{
+font-size: 22px;
+margin-bottom: 10px;
+}
+.tasks-container {
+    flex-grow: 1;
+    width: 100%;
+    
+}
+.task {
+padding: 15px 12px;
+background-color: rgba(228, 211, 211, 0.705);
+border-bottom: 1px solid white;
+color: black;
+font-size: 18px;
+border-radius: 10px;
+width: 100%;
+box-shadow: -1px 9px 37px -5px rgba(0,0,0,0.5);
+margin-bottom: 10px;
 }
