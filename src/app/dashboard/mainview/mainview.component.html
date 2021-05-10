@@ -15,36 +15,40 @@
         <div class="board-wrapper">
             <div class="board-columns" cdkDropListGroup>
                 <div class="board-column">
-
                     <div class="column-title">
                         Todo
                     </div>
-                    <div class="tasks-container" cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo"
+                    <div class="tasks-container" cdkDropList [cdkDropListData]="todo"
                         (cdkDropListDropped)="drop($event)">
                         <div class="task box" cdkDrag *ngFor='let item of todo'>
                             {{item}}
                         </div>
-
                     </div>
                 </div>
-                <div class="board-column">
 
+                <div class="board-column">
                     <div class="column-title">
                         inprogress
                     </div>
-                    <div class="tasks-container" cdkDropList #doneList="cdkDropList" [cdkDropListData]="done"
+                    <div class="tasks-container" cdkDropList  [cdkDropListData]="inprogress"
+                        (cdkDropListDropped)="drop($event)">
+                        <div class="task box" cdkDrag *ngFor='let item of inprogress'>
+                            {{item}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="board-column">
+                    <div class="column-title">
+                        done
+                    </div>
+                    <div class="tasks-container" cdkDropList  [cdkDropListData]="done"
                         (cdkDropListDropped)="drop($event)">
                         <div class="task box" cdkDrag *ngFor='let item of done'>
                             {{item}}
                         </div>
                     </div>
                 </div>
-                <div class="board-column" cdkDropList>
-                    <div class="column-title">
-                        done
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
